@@ -1,0 +1,425 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Servicii Metin2 - Tot ce ai nevoie pentru serverul tău Metin2.">
+  <meta name="keywords" content="metin2, server metin2, servicii metin2, setare server metin2, protecție metin2, sisteme noi metin2">
+  <meta name="author" content="Servicii Metin2">
+  <meta name="robots" content="index, follow">
+  <link rel="icon" href="img/favicon_m2a.ico" type="image/x-icon">
+  <title>Servicii Metin2</title>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" rel="stylesheet">
+  
+  
+  <!-- Local CSS -->
+  <link rel="stylesheet" href="css/style.css">
+  <!-- Script JS -->
+  <script src="js/testimonials.js"></script>
+  
+  
+  
+  
+  <style>
+    /* Reset CSS */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      line-height: 1.6;
+      background-color: #121212;
+      color: #fff;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* Navbar */
+    nav {
+      background-color: #1a1a1a;
+      padding: 15px 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+
+    nav .menu {
+      display: flex;
+      gap: 30px;
+      align-items: center;
+    }
+
+    nav .menu li {
+      list-style: none;
+      font-size: 1.2rem;
+    }
+
+    nav .menu li a {
+      color: #aaa;
+      font-size: 1.1rem;
+      font-weight: bold;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    nav .menu li a:hover {
+      color: #ff9800;
+      transform: scale(1.1);
+    }
+
+    nav .menu li i {
+      margin-right: 8px;
+    }
+
+    /* Icon Section */
+    .menu-icons {
+      display: flex;
+      gap: 15px;
+      margin-left: auto;
+    }
+
+    .menu-icons a {
+      color: #fff;
+      font-size: 1.5rem;
+      transition: color 0.3s ease, transform 0.3s ease;
+    }
+
+    .menu-icons a:hover {
+      color: #ff9800;
+      transform: scale(1.2);
+    }
+
+    /* Responsive Mobile Menu */
+    .mobile-menu-button {
+      display: none;
+      position: fixed;
+      top: 15px;
+      right: 20px;
+      background-color: #444;
+      color: #fff;
+      border: none;
+      padding: 10px 15px;
+      border-radius: 5px;
+      font-size: 1.5rem;
+      z-index: 1001;
+    }
+
+    .mobile-menu {
+      display: none;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: #333;
+      z-index: 1000;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+    }
+
+    .mobile-menu a {
+      text-decoration: none;
+      color: #fff;
+      font-size: 1.5rem;
+      margin: 15px 0;
+      transition: color 0.3s ease;
+    }
+
+    .mobile-menu a:hover {
+      color: #ff9800;
+    }
+
+    @media (max-width: 768px) {
+      nav .menu {
+        display: none;
+      }
+
+      nav .menu-icons {
+        display: none;
+      }
+
+      .mobile-menu-button {
+        display: block;
+      }
+
+      .mobile-menu.active {
+        display: flex;
+      }
+    }
+
+    /* Logo Section */
+    .logo-section {
+      text-align: center;
+      margin: 20px 0;
+    }
+
+    .logo-section img {
+      width: 200px;
+      height: auto;
+      transition: width 0.3s ease, height 0.3s ease;
+    }
+
+    @media (max-width: 768px) {
+      .logo-section img {
+        width: 150px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-section img {
+        width: 120px;
+      }
+    }
+
+    /* Header Section */
+    .header {
+      text-align: center;
+      padding: 40px 20px;
+      background: linear-gradient(90deg, #1a1a1a, #222);
+    }
+
+    .header h1 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .header p {
+      font-size: 1.2rem;
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    .header .cta {
+      background-color: #ff9800;
+      color: #fff;
+      padding: 10px 20px;
+      border-radius: 5px;
+      transition: background-color 0.3s;
+    }
+
+    .header .cta:hover {
+      background-color: #e67e22;
+    }
+
+    /* Services Section */
+    .services {
+      padding: 40px 20px;
+      text-align: center;
+      background-color: #1a1a1a;
+    }
+
+    .services h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+    }
+
+    .services p {
+      font-size: 1rem;
+      color: #aaa;
+      margin-bottom: 40px;
+    }
+
+    .service-cards {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+      gap: 20px;
+    }
+
+    .service-card {
+      background-color: #000;
+      border-radius: 10px;
+      padding: 20px;
+      text-align: center;
+      transition: transform 0.3s;
+    }
+
+    .service-card:hover {
+      transform: scale(1.05);
+    }
+
+    .service-card i {
+      font-size: 2rem;
+      margin-bottom: 10px;
+      color: #42a5f5;
+    }
+
+    .service-card h3 {
+      font-size: 1.5rem;
+      margin-bottom: 10px;
+    }
+
+    .service-card p {
+      color: #aaa;
+    }
+	
+	
+    /* Main Section */
+    .plan-section {
+      text-align: center;
+      background-color: #1a1a1a;
+      padding: 40px 20px;
+    }
+
+    .plan-header h1 {
+      font-size: 2.5rem;
+      color: #ffa726;
+      margin-bottom: 10px;
+    }
+
+    .plan-header p {
+      font-size: 1.2rem;
+      color: #aaa;
+      margin-bottom: 30px;
+    }
+
+    .plan-image img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 10px;
+      margin-bottom: 20px;
+    }
+
+    .plan-features h2 {
+      font-size: 2rem;
+      margin-bottom: 20px;
+      color: #ffa726;
+    }
+
+    .plan-features ul {
+      list-style: none;
+      padding: 0;
+      max-width: 600px;
+      margin: 0 auto;
+      text-align: left;
+    }
+
+    .plan-features ul li {
+      font-size: 1.2rem;
+      margin: 10px 0;
+      display: flex;
+      align-items: center;
+    }
+
+    .plan-features ul li i {
+      margin-right: 10px;
+      font-size: 1.5rem;
+      color: #42a5f5;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #222;
+      color: #aaa;
+      text-align: center;
+      padding: 20px;
+      font-size: 0.9rem;
+    }
+
+    footer a {
+      color: #ff9800;
+    }
+
+    footer a:hover {
+      color: #e67e22;
+    }
+	
+	
+	
+	
+  </style>
+</head>
+
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <ul class="menu">
+      <li><a href="index.html"><i class="fa fa-home"></i> Acasă</a></li>
+      <li><a href="servicii.html"><i class="fa fa-server"></i> Servicii</a></li>
+      <li><a href="despre.html"><i class="fa fa-info-circle"></i> Despre Noi</a></li>
+      <li><a href="contact.html"><i class="fa fa-envelope"></i> Contact</a></li>
+    </ul>
+    <div class="menu-icons">
+      <a href="https://wa.me/4917631236806?text=Vin%20de%20pe%20Servicii%20Metin2.Academy%20și%20am%20nevoie%20de%20serviciile%20tale." target="_blank">
+        <i class="fab fa-whatsapp"></i>
+      </a>
+      <a href="https://discord.gg/YdCVJHs5e5" target="_blank">
+        <i class="fab fa-discord"></i>
+      </a>
+    </div>
+  </nav>
+
+  <!-- Mobile Menu -->
+  <button class="mobile-menu-button" onclick="toggleMobileMenu()">☰</button>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#services"><i class="fa fa-server"></i> Servicii</a>
+    <a href="#contact"><i class="fa fa-envelope"></i> Contact</a>
+    <!-- <a href="https://wa.me/4917631236806" target="_blank"><i class="fab fa-whatsapp"></i> WhatsApp</a> -->
+    <!-- <a href="https://discord.gg/YdCVJHs5e5" target="_blank"><i class="fab fa-discord"></i> Discord</a> -->
+  </div>
+
+  <!-- Logo Section -->
+  <div class="logo-section">
+    <img src="img/logo/Logo3_ServiciiMetin2.png" alt="Servicii Metin2 Logo">
+  </div>
+  
+
+
+
+
+
+
+
+<!-- Main Content -->
+
+
+
+
+
+
+
+
+
+
+  <!-- Footer -->
+  <footer id="contact">
+    <p>Contactează-ne: <a href="mailto:contact@metin2.academy">contact@metin2.academy</a></p>
+    <p>© 2024 Servicii Metin2 - Toate drepturile rezervate.</p>
+  </footer>
+
+  <button class="mobile-menu-button" onclick="toggleMobileMenu()">☰</button>
+  <div class="mobile-menu" id="mobileMenu">
+    <a href="#home">Acasă</a>
+    <a href="#services">Servicii</a>
+    <a href="#contact">Contact</a>
+    <a href="https://wa.me/4917631236806" target="_blank">WhatsApp</a>
+    <a href="https://discord.gg/YdCVJHs5e5" target="_blank">Discord</a>
+  </div>
+
+  <script>
+    function toggleMobileMenu() {
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenu.classList.toggle('active');
+    }
+  </script>
+
+
+<div class="testimonials-icon">
+  <a href="testimonials.html" title="Vezi Testimoniale">
+    <i class="fa fa-comments"></i>
+  </a>
+</div>
+
+</body>
+
+</html>
